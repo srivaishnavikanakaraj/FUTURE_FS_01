@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Vaishnavi| Full Stack developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Sri Vaishnavi</div>
+
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle-btn" id="themeToggle">🌞</button>
+
+
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>Hi, I'm <span class="gradient-text">Sri Vaishnavi</span></h1>
+  <h2>Creative Full Stack developer</h2>
+  <p>I design and build immersive, animated, high-performance web experiences.</p>
+
+  <div class="buttons">
+    <a href="#projects" class="btn primary">View Projects</a>
+
+    <a
+      href="https://drive.google.com/uc?export=download&id=1G_RdEpf1gw6Hu-L7EPPvNyk0_B-kRzzv"
+      target="_blank"
+      class="btn outline resume-btn"
+    >
+      Download Resume
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-content">
+    <h2>About Me</h2>
+    <p>
+      I’m Sri Vaishnavi, a passionate Web Developer focused on building secure,
+      responsive, and visually engaging web applications. I enjoy working
+      on real-world projects, animations, and modern UI experiences using
+      HTML, CSS, JavaScript, and emerging technologies.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-slider">
+
+    <div class="project-card highlight">
+      <h3>Fraud Detection in Voting System</h3>
+      <p>
+        A secure electronic voting system preventing electoral fraud using
+        biometric authentication and retinal scanning.
+      </p>
+
+      <a href="#" class="project-link" onclick="toggleDetails(this)">View Details</a>
+
+      <div class="project-details">
+        <ul>
+          <li>Biometric voter authentication</li>
+          <li>Retinal scan verification</li>
+          <li>Prevents duplicate & fake voting</li>
+          <li>High security election workflow</li>
+        </ul>
+
+        <div class="project-buttons">
+          <button onclick="viewArchitecture()">View Architecture</button>
+          <button onclick="viewDetails()">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio website to showcase skills and projects.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Task Manager App</h3>
+      <p>Full stack task management application built using MERN stack.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Blog Platform</h3>
+      <p>Responsive blog platform with authentication and CRUD features.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <h2 class="contact-title">Contact Me</h2>
+
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+</section>
+
+
+<!-- SUCCESS MESSAGE -->
+<div id="successMessage" class="success-message">
+  ✅ Message sent successfully!
+</div>
+
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+  const body = document.body;
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light");
+
+    // Icon change
+    if (body.classList.contains("light")) {
+      toggleBtn.innerHTML = "🌙";
+    } else {
+      toggleBtn.innerHTML = "🌞";
+    }
+  });
+</script>
+
+</body>
+</html>
